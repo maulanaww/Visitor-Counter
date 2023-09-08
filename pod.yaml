@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-countcuy
+spec:
+  containers:
+  - name: app-count
+    image: reytama/app-gin-usery:1.0
+    ports:
+      - containerPort: 80
+  - name: app-count-pgsql
+    image: reytama/app-gin-dbx:1.0
+    ports:
+      - containerPort: 3306

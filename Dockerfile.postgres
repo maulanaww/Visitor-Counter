@@ -1,0 +1,12 @@
+# Menggunakan image resmi PostgreSQL
+FROM postgres:13
+
+# Mengatur variabel lingkungan
+ENV POSTGRES_USER postgres
+ENV POSTGRES_PASSWORD 123
+ENV HOST=localhost
+
+
+
+# Menyalin file SQL ke dalam container
+COPY init.sql /docker-entrypoint-initdb.d/init.sql
